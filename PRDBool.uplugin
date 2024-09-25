@@ -1,0 +1,50 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Pseudo Random Distribution Bool",
+	"Description": "Return a random boolean value based on the input probability and count.Make the random results closer to the average case.The supported probability precision is 3 decimal places.",
+	"Category": "Math",
+	"CreatedBy": "SkyWing",
+	"CreatedByURL": "",
+	"DocsURL": "https://docs.google.com/document/d/10dRLLZGJ1p2h6lrZRUiJyIe9-dzm619HhH5zfUC7AwA/pub",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/33c4caaa18884d8d95bffceac1735ff7",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "PRDBool",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Mac"
+			],
+			"BlacklistPlatforms": [
+				"Win32",
+				"Linux",
+				"IOS",
+				"Android"
+			],
+			"PlatformAllowList": [
+				"Win64",
+				"Mac"
+			],
+			"PlatformDenyList": [
+				"Win32",
+				"Linux",
+				"IOS",
+				"Android"
+			]
+		}
+	],
+	"LocalizationTargets": [
+		{
+			"Name": "PRDBool",
+			"LoadingPolicy": "Always"
+		}
+	]
+}

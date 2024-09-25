@@ -1,0 +1,64 @@
+﻿# PRDBool Chinese (Simplified) translation.
+# Fill out your copyright notice in the Description page of Project Settings.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: PRDBool\n"
+"POT-Creation-Date: 2024-09-24 01:41\n"
+"PO-Revision-Date: 2024-09-24 01:41\n"
+"Language-Team: \n"
+"Language: zh-Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Key:	PRDBoolBPLibrary:RandomBoolWithPRD:Count
+#. SourceLocation:	Meta-data for key DisplayName of member Count in PRDBoolBPLibrary:RandomBoolWithPRD (type: IntProperty, owner: RandomBoolWithPRD)
+#: Meta-data for key DisplayName of member Count in PRDBoolBPLibrary:RandomBoolWithPRD (type: IntProperty, owner: RandomBoolWithPRD)
+msgctxt "UObjectDisplayNames,PRDBoolBPLibrary:RandomBoolWithPRD:Count"
+msgid "Count"
+msgstr "次数"
+
+#. Key:	PRDBoolBPLibrary:RandomBoolWithPRD:IsSuccess
+#. SourceLocation:	Meta-data for key DisplayName of member IsSuccess in PRDBoolBPLibrary:RandomBoolWithPRD (type: BoolProperty, owner: RandomBoolWithPRD)
+#: Meta-data for key DisplayName of member IsSuccess in PRDBoolBPLibrary:RandomBoolWithPRD (type: BoolProperty, owner: RandomBoolWithPRD)
+msgctxt "UObjectDisplayNames,PRDBoolBPLibrary:RandomBoolWithPRD:IsSuccess"
+msgid "IsSuccess"
+msgstr "是否成功"
+
+#. Key:	PRDBoolBPLibrary:RandomBoolWithPRD:NewCount
+#. SourceLocation:	Meta-data for key DisplayName of member NewCount in PRDBoolBPLibrary:RandomBoolWithPRD (type: IntProperty, owner: RandomBoolWithPRD)
+#: Meta-data for key DisplayName of member NewCount in PRDBoolBPLibrary:RandomBoolWithPRD (type: IntProperty, owner: RandomBoolWithPRD)
+msgctxt "UObjectDisplayNames,PRDBoolBPLibrary:RandomBoolWithPRD:NewCount"
+msgid "NewCount"
+msgstr "新的次数"
+
+#. Key:	PRDBoolBPLibrary
+#. SourceLocation:	Meta-data for key DisplayName of member PRDBoolBPLibrary in None (type: Class, owner: PRDBoolBPLibrary)
+#: Meta-data for key DisplayName of member PRDBoolBPLibrary in None (type: Class, owner: PRDBoolBPLibrary)
+msgctxt "UObjectDisplayNames,PRDBoolBPLibrary"
+msgid "PRDBool BPLibrary"
+msgstr "伪随机概率蓝图函数库"
+
+#. Key:	PRDBoolBPLibrary:RandomBoolWithPRD:Probability
+#. SourceLocation:	Meta-data for key DisplayName of member Probability in PRDBoolBPLibrary:RandomBoolWithPRD (type: FloatProperty, owner: RandomBoolWithPRD)
+#: Meta-data for key DisplayName of member Probability in PRDBoolBPLibrary:RandomBoolWithPRD (type: FloatProperty, owner: RandomBoolWithPRD)
+msgctxt "UObjectDisplayNames,PRDBoolBPLibrary:RandomBoolWithPRD:Probability"
+msgid "Probability"
+msgstr "概率"
+
+#. Key:	PRDBoolBPLibrary:RandomBoolWithPRD
+#. SourceLocation:	Meta-data for key DisplayName of member RandomBoolWithPRD in PRDBoolBPLibrary (type: Function, owner: RandomBoolWithPRD)
+#: Meta-data for key DisplayName of member RandomBoolWithPRD in PRDBoolBPLibrary (type: Function, owner: RandomBoolWithPRD)
+msgctxt "UObjectDisplayNames,PRDBoolBPLibrary:RandomBoolWithPRD"
+msgid "Calculate Pseudo Random Bool"
+msgstr "计算伪随机布尔"
+
+#. Key:	PRDBoolBPLibrary:RandomBoolWithPRD
+#. SourceLocation:	Meta-data for key ToolTip of member RandomBoolWithPRD in PRDBoolBPLibrary (type: Function, owner: RandomBoolWithPRD)
+#: Meta-data for key ToolTip of member RandomBoolWithPRD in PRDBoolBPLibrary (type: Function, owner: RandomBoolWithPRD)
+msgctxt "UObjectToolTips,PRDBoolBPLibrary:RandomBoolWithPRD"
+msgid "Calculates a pseudo-random boolean value based on the given probability and count, returning a random result.\nMake the random results closer to the average case.\nFor example, To avoid situations where, with a 50% critical hit rate, there are 10 consecutive critical hits or 10 consecutive non-critical hits, the goal is to make the critical hit closer to the average rate.\nInput Parameters\nProbability: The probability of selecting true (success)in a pseudo - random manner, which should be in the range of 0 to 1.\nCount : The number of iterations for the random calculation, determining the sample size for the computation.\nOutput Parameters\nIsSuccess : Indicates whether the final computation was successful.\nNewCount : Represents the count after the computation is completed.When IsCuccess returns true, NewCount returns 0; when IsSuccess returns false, NewCount returns Count + 1."
+msgstr "计算伪随机布尔值，根据给定的概率和计数返回随机结果。\r\n使随机结果更接近平均情况。\r\n例如，为了避免在50%暴击率下会出现连续10次攻击暴击，或者连续10次攻击不暴击。使暴击接近平均值。\r\n输入参数\r\nProbability：伪随机选择为真（成功）的概率，范围应在 0 到 1 之间。\r\nCount：进行随机计算的次数，决定计算的样本大小。\r\n输出参数\r\nIsSuccess：表示最終计算是否成功。\r\nNewCount：表示计算完成后的计数。当 IsSuccess 返回 true 时，NewCount 返回 0。 IsSuccess 返回 false 时， NewCount 返回 Count+1 。"
+
