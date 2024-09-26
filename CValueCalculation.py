@@ -71,11 +71,11 @@ with open(file, 'w') as f:
     else:
                 IsNewLine = ''
     with open(file, 'a') as f:
-        f.write('{\n')
+        f.write('{\n{0.0,0.0},'+IsNewLine)
     for i in range(1,Decimal):
         with open(file, 'a') as f:
             p = i/Decimal
             f.write('{'+str(p)+','+str(f"{c_from_p(p):.15f}")+'},'+IsNewLine)
     with open(file, 'a') as f:
-        f.write('\n};')
+        f.write('{1.0,1.0},\n};')
     print('计算完成,查看结果请打开'+file)
