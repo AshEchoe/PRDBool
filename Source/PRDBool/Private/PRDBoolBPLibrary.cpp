@@ -19,7 +19,6 @@ void UPRDBoolBPLibrary::RandomBoolWithPRD(float Probability, int32 Count, bool& 
 	Probability = FMath::Clamp(Probability, 0.0f, 1.0f);
 	Count = FMath::Clamp(Count, 0, INT32_MAX - 1);
 	Count++;
-	INT32_MAX;
 	if (FMath::FRand() <= CValues[Probability] * Count) {
 		NewCount = 0;
 		IsSuccess = true;
