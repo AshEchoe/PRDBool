@@ -1,5 +1,6 @@
 import math
 import os
+from decimal import Decimal
 
 def p_from_c(c):
     # 根据 传入 C 值，计算该C值下，最大暴击范围的综合暴击率
@@ -33,7 +34,7 @@ def c_from_p(p):
         d_p_tested = p_from_c(d_mid)
 
         # 如果当次计算出的综合暴击率与理论暴击率的差值已经足够小，那么可以认为已经找到了符合要求的C值，这个时候退出循环
-        if abs(d_p_tested - p) <= 0.000000000000002:
+        if abs(d_p_tested - p) <= 2 * 10 ** -16:
             break
 
         # 若新计算的综合暴击率较大，则调整上界
@@ -45,6 +46,12 @@ def c_from_p(p):
 
     # 循环结束后返回最终估算的综合暴击率
     return d_mid
+
+def cut(num, c):
+    if c == 0:
+        return int(num)
+    else:
+        return round(num / (10 ** c)) * (10 ** c)
 
 # print(c_from_p(0.7))  # 计算在理论暴击率为0.7的情况下，概率增量C的值
 
@@ -71,11 +78,29 @@ with open(file, 'w') as f:
     else:
                 IsNewLine = ''
     with open(file, 'a') as f:
-        f.write('{\n{0.0,0.0},'+IsNewLine)
+        f.write('{'+f"{0:.3f}"+','+f"{0:.6f}"+'},'+IsNewLine)
     for i in range(1,Decimal):
         with open(file, 'a') as f:
             p = i/Decimal
-            f.write('{'+str(p)+','+str(f"{c_from_p(p):.15f}")+'},'+IsNewLine)
+            # number_str = f"{c_from_p(p):.30f}"
+            # number_str = number_str[:number_str.index('.') + 6 + 1]
+            f.write('{'+f"{p:.3f}"+','+f"{c_from_p(p):.6f}"+'},'+IsNewLine)
     with open(file, 'a') as f:
-        f.write('{1.0,1.0},\n};')
+        f.write('{'+f"{1:.3f}"+','+f"{1:.6f}"+'},\n};')
     print('计算完成,查看结果请打开'+file)
+
+# number = float(input("请输入一个浮点数："))
+
+# # 将浮点数转换为字符串
+# number_str = f"{c_from_p(number):.30f}"
+# print(number_str)
+# # 获取小数点的位置
+# dot_index = number_str.index('.')
+
+# # 获取需要截取的位数
+# decimal_places = int(input("请输入需要保留的小数位数："))
+
+# # 截取小数点后的指定位数
+# truncated_number_str = number_str[:dot_index + decimal_places + 1]
+
+# print("保留小数位数后的结果为：", truncated_number_str)
