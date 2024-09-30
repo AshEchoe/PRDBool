@@ -10,6 +10,11 @@ class UPRDBoolBPLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Calculate Pseudo Random Bool", ToolTip = "Calculates a pseudo-random boolean value based on the given probability and count, returning a random result.\nMake the random results closer to the average case.\nFor example, To avoid situations where, with a 50% critical hit rate, there are 10 consecutive critical hits or 10 consecutive non-critical hits, the goal is to make the critical hit closer to the average rate.\nInput Parameters\nProbability: The probability of selecting true (success)in a pseudo - random manner, which should be in the range of 0 to 1.\nCount : The number of iterations for the random calculation, determining the sample size for the computation.\nOutput Parameters\nIsSuccess : Indicates whether the final computation was successful.\nNewCount : Represents the count after the computation is completed.When IsCuccess returns true, NewCount returns 0; when IsSuccess returns false, NewCount returns Count + 1.", Category = "Math|Random"))
+	//计算伪随机分布布尔值
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Calculate Pseudo Random Bool", ToolTip = "Calculates a random boolean value based on the given probability and count.\nMake the random results closer to the average case.\nInput Parameters\nProbability: The probability that requires pseudo random distribution calculation., which should be in the range of 0 to 1.\nCount : The cumulative count for pseudo random distribution calculation. Changes in the Count value will affect the probability of IsSuccess returning true.\nOutput Parameters\nIsSuccess : The random Boolean value returned based on Probability and Count.\nNewCount : The cumulative count after the calculation is completed.When IsCuccess returns true, NewCount returns 0; when IsSuccess returns false, NewCount returns Count + 1.", Category = "Math|Random"))
 	static void RandomBoolWithPRD(UPARAM(DisplayName = "Probability") float Probability,UPARAM(DisplayName = "Count") int32 Count,UPARAM(DisplayName = "IsSuccess") bool& IsSuccess,UPARAM(DisplayName = "NewCount") int32& NewCount);
+
+	//获取伪随机分布概率增量
+	UFUNCTION(Blueprintpure, meta = (ReturnDisplayName = "ProbabilityIncrement",DisplayName = "Get Pseudo Random Probability Increment", ToolTip = "The constant probability increment corresponding to Probability.", Category = "Math|Random"))
+	static float GetProbabilityIncrement(UPARAM(DisplayName = "Probability") float Probability);
 };
