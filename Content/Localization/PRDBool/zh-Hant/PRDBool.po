@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PRDBool\n"
-"POT-Creation-Date: 2024-09-30 07:27\n"
-"PO-Revision-Date: 2024-09-30 07:27\n"
+"POT-Creation-Date: 2024-09-30 08:02\n"
+"PO-Revision-Date: 2024-09-30 08:02\n"
 "Language-Team: \n"
 "Language: zh-Hant\n"
 "MIME-Version: 1.0\n"
@@ -80,13 +80,13 @@ msgstr "返回值"
 #. SourceLocation:	Meta-data for key ToolTip of member GetProbabilityIncrement in PRDBoolBPLibrary (type: Function, owner: GetProbabilityIncrement)
 #: Meta-data for key ToolTip of member GetProbabilityIncrement in PRDBoolBPLibrary (type: Function, owner: GetProbabilityIncrement)
 msgctxt "UObjectToolTips,PRDBoolBPLibrary:GetProbabilityIncrement"
-msgid "The constant probability increment corresponding to Probability."
-msgstr "Probability 對應的常數機率增量。"
+msgid "Returns the constant probability increment corresponding to Probability."
+msgstr "返回 Probability 對應的常數機率增量。"
 
 #. Key:	PRDBoolBPLibrary:RandomBoolWithPRD
 #. SourceLocation:	Meta-data for key ToolTip of member RandomBoolWithPRD in PRDBoolBPLibrary (type: Function, owner: RandomBoolWithPRD)
 #: Meta-data for key ToolTip of member RandomBoolWithPRD in PRDBoolBPLibrary (type: Function, owner: RandomBoolWithPRD)
 msgctxt "UObjectToolTips,PRDBoolBPLibrary:RandomBoolWithPRD"
-msgid "Calculates a random boolean value based on the given probability and count.\nMake the random results closer to the average case.\nInput Parameters\nProbability: The probability that requires pseudo random distribution calculation., which should be in the range of 0 to 1.\nCount : The cumulative count for pseudo random distribution calculation. Changes in the Count value will affect the probability of IsSuccess returning true.\nOutput Parameters\nIsSuccess : The random Boolean value returned based on Probability and Count.\nNewCount : The cumulative count after the calculation is completed.When IsCuccess returns true, NewCount returns 0; when IsSuccess returns false, NewCount returns Count + 1."
-msgstr "計算偽隨機布林值，根據給定的機率和次數返回隨機結果。\r\n使隨機結果更接近平均情況。\r\n輸入參數\r\nProbability：需要進行偽隨機分佈計算的機率，範圍應在 0 到 1 之間。\r\nCount：偽隨機分佈計算的累積次數，改變 Count 值會影響 IsSuccess 返回 true 的機率。\r\n輸出參數\r\nIsSuccess：根據 Probability 和 Count 返回的隨機布林值。\r\nNewCount：計算完成後的累積次數。當 IsSuccess 返回 true 時，NewCount 返回 0；當 IsSuccess 返回 false 時，NewCount 返回 Count+1。"
+msgid "Returns a random boolean generated based on probability and count.\nMake the random results closer to the average case.\nInput Parameters\nProbability: The probability that requires pseudo random distribution calculation., which should be in the range of 0 to 1.\nCount : The cumulative count for pseudo random distribution calculation. Changes in the Count value will affect the probability of IsSuccess returning true.\nOutput Parameters\nIsSuccess : The random Boolean value returned based on Probability and Count.\nNewCount : The cumulative count after the calculation is completed.When IsCuccess returns true, NewCount returns 0; when IsSuccess returns false, NewCount returns Count + 1."
+msgstr "返回一個根據機率和次數生成的隨機布林。\r\n使隨機結果更接近平均情況。\r\n輸入參數\r\nProbability：需要進行偽隨機分佈計算的機率，範圍應在 0 到 1 之間。\r\nCount：偽隨機分佈計算的累積次數，改變 Count 值會影響 IsSuccess 返回 true 的機率。\r\n輸出參數\r\nIsSuccess：根據 Probability 和 Count 返回的隨機布林值。\r\nNewCount：計算完成後的累積次數。當 IsSuccess 返回 true 時，NewCount 返回 0；當 IsSuccess 返回 false 時，NewCount 返回 Count+1。"
 
