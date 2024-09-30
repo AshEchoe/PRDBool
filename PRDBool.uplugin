@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"Version": 2,
+	"Version": 3,
 	"VersionName": "1.1.0",
 	"FriendlyName": "Pseudo Random Distribution Bool",
 	"Description": "Return a random boolean value based on the input probability and count.Make the random results closer to the average case.The supported probability precision is 3 decimal places.",
